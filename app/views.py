@@ -120,7 +120,7 @@ def location(request, id):
     # fetch the object related to passed id
     with connection.cursor() as cursor:
         cursor.execute("SELECT * FROM customers WHERE customerid = %s", [id])
-        customer = cursor.fetchone()
-    result_dict = {'cust': customer}
+        location = forward_geocoding(request, id)
+    result_dict = {'cust': location}
 
     return render(request,'app/view.html',result_dict)
