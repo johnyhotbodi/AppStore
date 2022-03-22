@@ -11,7 +11,8 @@ CREATE TABLE IF NOT EXISTS customers (
  dob DATE NOT NULL,
  since DATE NOT NULL,
  customerid VARCHAR(16) PRIMARY KEY,
- country VARCHAR(16) NOT NULL);
+ country VARCHAR(16) NOT NULL;
+ location VARCHAR(128) NOT NULL;
 	
 CREATE TABLE IF NOT EXISTS games(
  name VARCHAR(32),
@@ -25,3 +26,4 @@ CREATE TABLE IF NOT EXISTS games(
  version CHAR(3),
  PRIMARY KEY (customerid, name, version),
  FOREIGN KEY (name, version) REFERENCES games(name, version) ON UPDATE CASCADE ON DELETE CASCADE DEFERRABLE INITIALLY DEFERRED);
+ 
