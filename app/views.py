@@ -47,9 +47,9 @@ def add(request):
             ## No customer with same id
             if customer == None:
                 ##TODO: date validation
-                cursor.execute("INSERT INTO customers VALUES (%s, %s, %s, %s, %s, %s, %s)"
+                cursor.execute("INSERT INTO customers VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
                         , [request.POST['first_name'], request.POST['last_name'], request.POST['email'],
-                           request.POST['dob'] , request.POST['since'], request.POST['customerid'], request.POST['country'] ])
+                           request.POST['dob'] , request.POST['since'], request.POST['customerid'],  request.POST['address'], request.POST['country'] ])
                 return redirect('index')    
             else:
                 status = 'Customer with ID %s already exists' % (request.POST['customerid'])
@@ -78,9 +78,9 @@ def edit(request, id):
     if request.POST:
         ##TODO: date validation
         with connection.cursor() as cursor:
-            cursor.execute("UPDATE customers SET first_name = %s, last_name = %s, email = %s, dob = %s, since = %s, country = %s WHERE customerid = %s"
+            cursor.execute("UPDATE customers SET first_name = %s, last_name = %s, email = %s, dob = %s, since = %s, address = %s, country = %s WHERE customerid = %s"
                     , [request.POST['first_name'], request.POST['last_name'], request.POST['email'],
-                        request.POST['dob'] , request.POST['since'], request.POST['country'], id ])
+                        request.POST['dob'] , request.POST['since'], request.POST['address'], request.POST['country'], id ])
             status = 'Customer edited successfully!'
             cursor.execute("SELECT * FROM customers WHERE customerid = %s", [id])
             obj = cursor.fetchone()
@@ -90,3 +90,23 @@ def edit(request, id):
     context["status"] = status
  
     return render(request, "app/edit.html", context)
+
+
+import http.client, urllib.parse
+
+def forward_geocoding(request.POST['address'], request.POST['country'],)
+    conn = http.client.HTTPConnection('api.positionstack.com')
+    
+    params = urllib.parse.urlencode({
+        'access_key': '13313c42d97f227972d164fce0a81f4f',
+        'query': request.POST['address'],
+        'region': request.POST['country'],
+        'limit': 1,
+        })
+
+    conn.request('GET', '/v1/forward?{}'.format(params))
+
+    res = conn.getresponse()
+    data = res.read()
+
+    print(data.decode('utf-8'))
