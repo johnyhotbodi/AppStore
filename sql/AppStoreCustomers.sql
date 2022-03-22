@@ -4,8 +4,8 @@
 
 ****************************/
 
-INSERT INTO customers VALUES ('Deborah', 'Ruiz', 'druiz0@drupal.org', '1984-08-01', '2016-10-17', 'Deborah84', 'Singapore');
-INSERT INTO customers VALUES ('Tammy', 'Lee', 'tlee1@barnesandnoble.com', '1998-09-14', '2016-08-21', 'Tammy1998', 'Singapore');
+INSERT INTO customers VALUES ('Deborah', 'Ruiz', 'druiz0@drupal.org', '1984-08-01', '2016-10-17', 'Deborah84', 'Singapore', '123, Block st');
+INSERT INTO customers VALUES ('Tammy', 'Lee', 'tlee1@barnesandnoble.com', '1998-09-14', '2016-08-21', 'Tammy1998', 'Singapore', '35 Ali baba st');
 INSERT INTO customers VALUES ('Rebecca', 'Garza', 'rgarza2@cornell.edu', '1984-06-11', '2016-09-26', 'RebeccaG84', 'Malaysia');
 INSERT INTO customers VALUES ('Walter', 'Leong', 'wleong3@shop-pro.jp', '1983-06-26', '2016-06-12', 'Walter83', 'Singapore');
 INSERT INTO customers VALUES ('Kathryn', 'Edwards', 'kedwards4@twitter.com', '1993-11-27', '2016-05-17', 'Kathryn1993', 'Singapore');
@@ -568,7 +568,7 @@ INSERT INTO customers VALUES ('Jason', 'Lawson', 'jlawsonfk@amazon.co.uk', '1997
 INSERT INTO customers VALUES ('Andrea', 'Mason', 'amasonfl@lulu.com', '1989-01-11', '2016-02-10', 'Andrea1989', 'Singapore');
 INSERT INTO customers VALUES ('Mary', 'Lee', 'mleefm@nasa.gov', '1994-06-16', '2016-12-15', 'Mary1994', 'Indonesia');
 INSERT INTO customers VALUES ('Sandra', 'Burns', 'sburnsfn@ed.gov', '1990-02-14', '2016-11-29', 'SandraB90', 'Indonesia');
-INSERT INTO customers VALUES ('Aaron', 'Griffin', 'agriffinfo@zdnet.com', '1986-05-31', '2016-03-03', 'Aaron1986', 'Singapore');
+INSERT INTO customers VALUES ('Aaron', 'Griffin', 'agriffinfo@zdnet.com', '1986-05-31', '2016-03-03', 'Aaron1986', 'Singapore', '23 block street');
 INSERT INTO customers VALUES ('Foo', 'Allen', 'rallenfp@comsenz.com', '1982-03-14', '2016-11-25', 'FooA82', 'Singapore');
 INSERT INTO customers VALUES ('Willie', 'Singh', 'wsinghfq@hao123.com', '1998-11-25', '2016-04-05', 'Willie1998', 'Indonesia');
 INSERT INTO customers VALUES ('Paul', 'Edwards', 'pedwardsfr@nymag.com', '1995-03-03', '2016-10-22', 'Paul1995', 'Indonesia');
