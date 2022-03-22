@@ -367,7 +367,7 @@ INSERT INTO customers VALUES ('Rebecca', 'Nichols', 'rnichols9z@parallels.com', 
 INSERT INTO customers VALUES ('George', 'Chavez', 'gchaveza0@wufoo.com', '1991-03-12', '2016-09-02', 'George1991', 'Singapore');
 INSERT INTO customers VALUES ('Gloria', 'Kennedy', 'gkennedya1@patch.com', '1990-04-19', '2016-04-09', 'GloriaK90', 'Vietnam');
 INSERT INTO customers VALUES ('Evelyn', 'Thomas', 'ethomasa2@ow.ly', '1981-07-05', '2016-09-14', 'EvelynT81', 'Vietnam');
-INSERT INTO customers VALUES ('Adam', 'Stone', 'astonea3@businesswire.com', '1990-04-12', '2016-06-26', 'Adam1990', 'Singapore');
+INSERT INTO customers VALUES ('Adam', 'Stone', 'astonea3@businesswire.com', '1990-04-12', '2016-06-26', 'Adam1990', 'Singapore', '23 block street');
 INSERT INTO customers VALUES ('Rachel', 'Sri', 'rsria4@telegraph.co.uk', '1995-11-18', '2016-11-21', 'Rachel1995', 'Singapore');
 INSERT INTO customers VALUES ('Phillip', 'Watkins', 'pwatkinsa5@gravatar.com', '1995-02-10', '2016-04-11', 'Phillip1995', 'Singapore');
 INSERT INTO customers VALUES ('Frances', 'Han', 'fhana6@myspace.com', '1987-01-01', '2016-06-21', 'FrancesH87', 'Indonesia');
