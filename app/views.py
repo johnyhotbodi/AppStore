@@ -94,7 +94,10 @@ def edit(request, id):
 
 import http.client, urllib.parse
 
-def forward_geocoding(request.POST['address'], request.POST['country'],)
+def forward_geocoding(request, id):
+    with connection.cursor() as cursor:
+    cursor.execute("SELECT * FROM customers WHERE customerid = %s", [id])
+ 
     conn = http.client.HTTPConnection('api.positionstack.com')
     
     params = urllib.parse.urlencode({
