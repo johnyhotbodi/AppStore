@@ -121,6 +121,6 @@ def location(request, id):
     with connection.cursor() as cursor:
         cursor.execute("SELECT * FROM customers WHERE customerid = %s", [id])
         location = forward_geocoding(request, id)
-    result_dict = {'cust': location}
+    result_dict = {'location': location}
 
     return render(request,'app/view.html',result_dict)
