@@ -49,7 +49,7 @@ def add(request):
                 ##TODO: date validation
                 cursor.execute("INSERT INTO customers VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
                         , [request.POST['first_name'], request.POST['last_name'], request.POST['email'],
-                           request.POST['dob'] , request.POST['since'], request.POST['customerid'],  request.POST['address'], request.POST['country'] ])
+                           request.POST['dob'] , request.POST['since'], request.POST['customerid'],  request.POST['country'], request.POST['address'] ])
                 return redirect('index')    
             else:
                 status = 'Customer with ID %s already exists' % (request.POST['customerid'])
@@ -80,7 +80,7 @@ def edit(request, id):
         with connection.cursor() as cursor:
             cursor.execute("UPDATE customers SET first_name = %s, last_name = %s, email = %s, dob = %s, since = %s, address = %s, country = %s WHERE customerid = %s"
                     , [request.POST['first_name'], request.POST['last_name'], request.POST['email'],
-                        request.POST['dob'] , request.POST['since'], request.POST['address'], request.POST['country'], id ])
+                        request.POST['dob'] , request.POST['since'], request.POST['country'], request.POST['address'], id ])
             status = 'Customer edited successfully!'
             cursor.execute("SELECT * FROM customers WHERE customerid = %s", [id])
             obj = cursor.fetchone()
@@ -109,4 +109,15 @@ def forward_geocoding(request.POST['address'], request.POST['country'],)
     res = conn.getresponse()
     data = res.read()
 
-    print(data.decode('utf-8'))
+    return data.decode('utf-8')
+    
+def location(request, id):
+    """Shows the main page"""
+
+    # fetch the object related to passed id
+    with connection.cursor() as cursor:
+        cursor.execute("SELECT * FROM customers WHERE customerid = %s", [id])
+        customer = cursor.fetchone()
+    result_dict = {'cust': customer}
+
+    return render(request,'app/view.html',result_dict)
