@@ -96,7 +96,7 @@ import http.client, urllib.parse
 
 def forward_geocoding(request, id):
     with connection.cursor() as cursor:
-    cursor.execute("SELECT * FROM customers WHERE customerid = %s", [id])
+        cursor.execute("SELECT * FROM customers WHERE customerid = %s", [id])
  
     conn = http.client.HTTPConnection('api.positionstack.com')
     
