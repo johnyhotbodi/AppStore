@@ -17,7 +17,7 @@
         Date of birth (yyyy-mm-dd)<span class="asteriskField">*</span> </label> <div class="controls"> <input type="text" name="dob" value="{{obj.3|slugify}}" class="dateinput" required="" id="id_dob"> </div> </div> <div id="div_id_since" class="control-group"> <label for="id_since" class="control-label requiredField">
         Since (yyyy-mm-dd)<span class="asteriskField">*</span> </label> <div class="controls"> <input type="text" name="since" value="{{obj.4|slugify}}" class="dateinput" required="" id="id_since"> </div> </div> <div id="div_id_customerid" class="control-group"> <label for="id_customerid" class="control-label requiredField">
         Country<span class="asteriskField">*</span> </label> <div class="controls"> <input type="text" name="country" value="{{obj.6}}" maxlength="16" class="textinput textInput" required="" id="id_country"> </div> </div>
-
+        Address<span class="asteriskField">*</span> </label> <div class="controls"> <input type="text" name="address" value="{{obj.6}}" maxlength="128" class="textinput textInput" required="" id="id_address"> </div> </div>
         <br>
         <button type="submit" value="Update">Update</button>
     </form>
