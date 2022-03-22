@@ -4,7 +4,7 @@
 
 ********************/
 
-CREATE TABLE IF NOT EXISTS customers (
+CREATE TABLE customers (
  first_name VARCHAR(64) NOT NULL,
  last_name VARCHAR(64) NOT NULL,
  email VARCHAR(64) UNIQUE NOT NULL,
